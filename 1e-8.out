@@ -1,0 +1,1119 @@
+Loading mkl version 2021.2.0
+Loading compiler-rt version 2021.2.0
+Loading tbb version 2021.2.0
+Loading compiler version 2021.2.0
+Loading tbb version 2021.2.0
+Loading compiler-rt version 2021.2.0
+Loading mpi version 2021.2.0
+/opt/intel_2021/oneapi/mpi/2021.2.0/bin/mpirun
+/opt/intel_2021/oneapi/mpi/2021.2.0/bin/mpiifort
+/opt/intel_2021/oneapi/compiler/2021.2.0/linux/bin/intel64/icc
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2106                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _c15bfde3cb-20210624 OPENFOAM=2106
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Oct 30 2021
+Time   : 13:32:49
+Host   : node5.iitgn.ac.in
+PID    : 123778
+I/O    : uncollated
+Case   : /home/DilipSS_grp/17210069/OF/ICEF/axissym/0.5ms_1e-8
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh
+
+Create mesh
+
+Calculating distribution of cells
+Decomposition method simple [40] (region region0)
+
+Finished decomposition in 0.24 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 5216
+    Number of faces shared with processor 1 = 228
+    Number of faces shared with processor 2 = 245
+    Number of faces shared with processor 3 = 18
+    Number of processor patches = 3
+    Number of processor faces = 491
+    Number of boundary faces = 5595
+
+Processor 1
+    Number of cells = 11704
+    Number of faces shared with processor 0 = 228
+    Number of faces shared with processor 3 = 474
+    Number of processor patches = 2
+    Number of processor faces = 702
+    Number of boundary faces = 4835
+
+Processor 2
+    Number of cells = 8343
+    Number of faces shared with processor 0 = 245
+    Number of faces shared with processor 3 = 425
+    Number of faces shared with processor 4 = 386
+    Number of faces shared with processor 5 = 34
+    Number of processor patches = 4
+    Number of processor faces = 1090
+    Number of boundary faces = 7024
+
+Processor 3
+    Number of cells = 8577
+    Number of faces shared with processor 0 = 18
+    Number of faces shared with processor 1 = 474
+    Number of faces shared with processor 2 = 425
+    Number of faces shared with processor 5 = 987
+    Number of processor patches = 4
+    Number of processor faces = 1904
+    Number of boundary faces = 3091
+
+Processor 4
+    Number of cells = 7743
+    Number of faces shared with processor 2 = 386
+    Number of faces shared with processor 5 = 268
+    Number of faces shared with processor 6 = 536
+    Number of faces shared with processor 7 = 20
+    Number of processor patches = 4
+    Number of processor faces = 1210
+    Number of boundary faces = 5530
+
+Processor 5
+    Number of cells = 9176
+    Number of faces shared with processor 2 = 34
+    Number of faces shared with processor 3 = 987
+    Number of faces shared with processor 4 = 268
+    Number of faces shared with processor 7 = 1392
+    Number of processor patches = 4
+    Number of processor faces = 2681
+    Number of boundary faces = 3216
+
+Processor 6
+    Number of cells = 7866
+    Number of faces shared with processor 4 = 536
+    Number of faces shared with processor 7 = 190
+    Number of faces shared with processor 8 = 667
+    Number of faces shared with processor 9 = 4
+    Number of processor patches = 4
+    Number of processor faces = 1397
+    Number of boundary faces = 5070
+
+Processor 7
+    Number of cells = 9053
+    Number of faces shared with processor 4 = 20
+    Number of faces shared with processor 5 = 1392
+    Number of faces shared with processor 6 = 190
+    Number of faces shared with processor 8 = 3
+    Number of faces shared with processor 9 = 1716
+    Number of processor patches = 5
+    Number of processor faces = 3321
+    Number of boundary faces = 2922
+
+Processor 8
+    Number of cells = 7965
+    Number of faces shared with processor 6 = 667
+    Number of faces shared with processor 7 = 3
+    Number of faces shared with processor 9 = 146
+    Number of faces shared with processor 10 = 789
+    Number of faces shared with processor 11 = 14
+    Number of processor patches = 5
+    Number of processor faces = 1619
+    Number of boundary faces = 4758
+
+Processor 9
+    Number of cells = 8954
+    Number of faces shared with processor 6 = 4
+    Number of faces shared with processor 7 = 1716
+    Number of faces shared with processor 8 = 146
+    Number of faces shared with processor 11 = 1968
+    Number of processor patches = 4
+    Number of processor faces = 3834
+    Number of boundary faces = 2570
+
+Processor 10
+    Number of cells = 8669
+    Number of faces shared with processor 8 = 789
+    Number of faces shared with processor 11 = 141
+    Number of faces shared with processor 12 = 972
+    Number of faces shared with processor 13 = 18
+    Number of processor patches = 4
+    Number of processor faces = 1920
+    Number of boundary faces = 4724
+
+Processor 11
+    Number of cells = 8250
+    Number of faces shared with processor 8 = 14
+    Number of faces shared with processor 9 = 1968
+    Number of faces shared with processor 10 = 141
+    Number of faces shared with processor 13 = 2056
+    Number of processor patches = 4
+    Number of processor faces = 4179
+    Number of boundary faces = 2324
+
+Processor 12
+    Number of cells = 9551
+    Number of faces shared with processor 10 = 972
+    Number of faces shared with processor 13 = 103
+    Number of faces shared with processor 14 = 1186
+    Number of faces shared with processor 15 = 12
+    Number of processor patches = 4
+    Number of processor faces = 2273
+    Number of boundary faces = 4750
+
+Processor 13
+    Number of cells = 7368
+    Number of faces shared with processor 10 = 18
+    Number of faces shared with processor 11 = 2056
+    Number of faces shared with processor 12 = 103
+    Number of faces shared with processor 15 = 2118
+    Number of processor patches = 4
+    Number of processor faces = 4295
+    Number of boundary faces = 2118
+
+Processor 14
+    Number of cells = 9901
+    Number of faces shared with processor 12 = 1186
+    Number of faces shared with processor 15 = 77
+    Number of faces shared with processor 16 = 1196
+    Number of faces shared with processor 17 = 9
+    Number of processor patches = 4
+    Number of processor faces = 2468
+    Number of boundary faces = 3616
+
+Processor 15
+    Number of cells = 7018
+    Number of faces shared with processor 12 = 12
+    Number of faces shared with processor 13 = 2118
+    Number of faces shared with processor 14 = 77
+    Number of faces shared with processor 16 = 1
+    Number of faces shared with processor 17 = 2187
+    Number of processor patches = 5
+    Number of processor faces = 4395
+    Number of boundary faces = 1997
+
+Processor 16
+    Number of cells = 9670
+    Number of faces shared with processor 14 = 1196
+    Number of faces shared with processor 15 = 1
+    Number of faces shared with processor 17 = 67
+    Number of faces shared with processor 18 = 1171
+    Number of faces shared with processor 19 = 5
+    Number of processor patches = 5
+    Number of processor faces = 2440
+    Number of boundary faces = 3176
+
+Processor 17
+    Number of cells = 7249
+    Number of faces shared with processor 14 = 9
+    Number of faces shared with processor 15 = 2187
+    Number of faces shared with processor 16 = 67
+    Number of faces shared with processor 19 = 2146
+    Number of processor patches = 4
+    Number of processor faces = 4409
+    Number of boundary faces = 2080
+
+Processor 18
+    Number of cells = 9533
+    Number of faces shared with processor 16 = 1171
+    Number of faces shared with processor 19 = 44
+    Number of faces shared with processor 20 = 1111
+    Number of processor patches = 3
+    Number of processor faces = 2326
+    Number of boundary faces = 3108
+
+Processor 19
+    Number of cells = 7386
+    Number of faces shared with processor 16 = 5
+    Number of faces shared with processor 17 = 2146
+    Number of faces shared with processor 18 = 44
+    Number of faces shared with processor 21 = 2091
+    Number of processor patches = 4
+    Number of processor faces = 4286
+    Number of boundary faces = 2118
+
+Processor 20
+    Number of cells = 9385
+    Number of faces shared with processor 18 = 1111
+    Number of faces shared with processor 21 = 50
+    Number of faces shared with processor 22 = 1165
+    Number of processor patches = 3
+    Number of processor faces = 2326
+    Number of boundary faces = 2849
+
+Processor 21
+    Number of cells = 7534
+    Number of faces shared with processor 19 = 2091
+    Number of faces shared with processor 20 = 50
+    Number of faces shared with processor 22 = 4
+    Number of faces shared with processor 23 = 2137
+    Number of processor patches = 4
+    Number of processor faces = 4282
+    Number of boundary faces = 2160
+
+Processor 22
+    Number of cells = 9546
+    Number of faces shared with processor 20 = 1165
+    Number of faces shared with processor 21 = 4
+    Number of faces shared with processor 23 = 71
+    Number of faces shared with processor 24 = 1215
+    Number of processor patches = 4
+    Number of processor faces = 2455
+    Number of boundary faces = 3186
+
+Processor 23
+    Number of cells = 7373
+    Number of faces shared with processor 21 = 2137
+    Number of faces shared with processor 22 = 71
+    Number of faces shared with processor 24 = 12
+    Number of faces shared with processor 25 = 2150
+    Number of processor patches = 4
+    Number of processor faces = 4370
+    Number of boundary faces = 2102
+
+Processor 24
+    Number of cells = 9867
+    Number of faces shared with processor 22 = 1215
+    Number of faces shared with processor 23 = 12
+    Number of faces shared with processor 25 = 76
+    Number of faces shared with processor 26 = 1151
+    Number of processor patches = 4
+    Number of processor faces = 2454
+    Number of boundary faces = 3715
+
+Processor 25
+    Number of cells = 7052
+    Number of faces shared with processor 23 = 2150
+    Number of faces shared with processor 24 = 76
+    Number of faces shared with processor 26 = 11
+    Number of faces shared with processor 27 = 2112
+    Number of processor patches = 4
+    Number of processor faces = 4349
+    Number of boundary faces = 2019
+
+Processor 26
+    Number of cells = 9459
+    Number of faces shared with processor 24 = 1151
+    Number of faces shared with processor 25 = 11
+    Number of faces shared with processor 27 = 103
+    Number of faces shared with processor 28 = 1000
+    Number of faces shared with processor 29 = 3
+    Number of processor patches = 5
+    Number of processor faces = 2268
+    Number of boundary faces = 4771
+
+Processor 27
+    Number of cells = 7460
+    Number of faces shared with processor 25 = 2112
+    Number of faces shared with processor 26 = 103
+    Number of faces shared with processor 28 = 10
+    Number of faces shared with processor 29 = 2069
+    Number of processor patches = 4
+    Number of processor faces = 4294
+    Number of boundary faces = 2121
+
+Processor 28
+    Number of cells = 8761
+    Number of faces shared with processor 26 = 1000
+    Number of faces shared with processor 27 = 10
+    Number of faces shared with processor 29 = 150
+    Number of faces shared with processor 30 = 811
+    Number of faces shared with processor 31 = 3
+    Number of processor patches = 5
+    Number of processor faces = 1974
+    Number of boundary faces = 4639
+
+Processor 29
+    Number of cells = 8158
+    Number of faces shared with processor 26 = 3
+    Number of faces shared with processor 27 = 2069
+    Number of faces shared with processor 28 = 150
+    Number of faces shared with processor 30 = 7
+    Number of faces shared with processor 31 = 1978
+    Number of processor patches = 5
+    Number of processor faces = 4207
+    Number of boundary faces = 2308
+
+Processor 30
+    Number of cells = 7989
+    Number of faces shared with processor 28 = 811
+    Number of faces shared with processor 29 = 7
+    Number of faces shared with processor 31 = 153
+    Number of faces shared with processor 32 = 656
+    Number of processor patches = 4
+    Number of processor faces = 1627
+    Number of boundary faces = 4805
+
+Processor 31
+    Number of cells = 8930
+    Number of faces shared with processor 28 = 3
+    Number of faces shared with processor 29 = 1978
+    Number of faces shared with processor 30 = 153
+    Number of faces shared with processor 32 = 16
+    Number of faces shared with processor 33 = 1701
+    Number of processor patches = 5
+    Number of processor faces = 3851
+    Number of boundary faces = 2599
+
+Processor 32
+    Number of cells = 7772
+    Number of faces shared with processor 30 = 656
+    Number of faces shared with processor 31 = 16
+    Number of faces shared with processor 33 = 191
+    Number of faces shared with processor 34 = 536
+    Number of processor patches = 4
+    Number of processor faces = 1399
+    Number of boundary faces = 5042
+
+Processor 33
+    Number of cells = 9147
+    Number of faces shared with processor 31 = 1701
+    Number of faces shared with processor 32 = 191
+    Number of faces shared with processor 34 = 10
+    Number of faces shared with processor 35 = 1378
+    Number of processor patches = 4
+    Number of processor faces = 3280
+    Number of boundary faces = 2917
+
+Processor 34
+    Number of cells = 7607
+    Number of faces shared with processor 32 = 536
+    Number of faces shared with processor 33 = 10
+    Number of faces shared with processor 35 = 284
+    Number of faces shared with processor 36 = 368
+    Number of processor patches = 4
+    Number of processor faces = 1198
+    Number of boundary faces = 5617
+
+Processor 35
+    Number of cells = 9312
+    Number of faces shared with processor 33 = 1378
+    Number of faces shared with processor 34 = 284
+    Number of faces shared with processor 36 = 30
+    Number of faces shared with processor 37 = 991
+    Number of processor patches = 4
+    Number of processor faces = 2683
+    Number of boundary faces = 3253
+
+Processor 36
+    Number of cells = 8594
+    Number of faces shared with processor 34 = 368
+    Number of faces shared with processor 35 = 30
+    Number of faces shared with processor 37 = 421
+    Number of faces shared with processor 38 = 250
+    Number of processor patches = 4
+    Number of processor faces = 1069
+    Number of boundary faces = 6895
+
+Processor 37
+    Number of cells = 8325
+    Number of faces shared with processor 35 = 991
+    Number of faces shared with processor 36 = 421
+    Number of faces shared with processor 38 = 17
+    Number of faces shared with processor 39 = 458
+    Number of processor patches = 4
+    Number of processor faces = 1887
+    Number of boundary faces = 2974
+
+Processor 38
+    Number of cells = 5754
+    Number of faces shared with processor 36 = 250
+    Number of faces shared with processor 37 = 17
+    Number of faces shared with processor 39 = 212
+    Number of processor patches = 3
+    Number of processor faces = 479
+    Number of boundary faces = 5481
+
+Processor 39
+    Number of cells = 11165
+    Number of faces shared with processor 37 = 458
+    Number of faces shared with processor 38 = 212
+    Number of processor patches = 2
+    Number of processor faces = 670
+    Number of boundary faces = 4783
+
+Number of processor faces = 51181
+Max number of cells = 11704 (38.3525128405% above average 8459.55)
+Max number of processor patches = 5 (25% above average 4)
+Max number of faces between processors = 4409 (72.2904984272% above average 2559.05)
+
+Time = 0
+
+Processor 0: field transfer
+Processor 1: field transfer
+Processor 2: field transfer
+Processor 3: field transfer
+Processor 4: field transfer
+Processor 5: field transfer
+Processor 6: field transfer
+Processor 7: field transfer
+Processor 8: field transfer
+Processor 9: field transfer
+Processor 10: field transfer
+Processor 11: field transfer
+Processor 12: field transfer
+Processor 13: field transfer
+Processor 14: field transfer
+Processor 15: field transfer
+Processor 16: field transfer
+Processor 17: field transfer
+Processor 18: field transfer
+Processor 19: field transfer
+Processor 20: field transfer
+Processor 21: field transfer
+Processor 22: field transfer
+Processor 23: field transfer
+Processor 24: field transfer
+Processor 25: field transfer
+Processor 26: field transfer
+Processor 27: field transfer
+Processor 28: field transfer
+Processor 29: field transfer
+Processor 30: field transfer
+Processor 31: field transfer
+Processor 32: field transfer
+Processor 33: field transfer
+Processor 34: field transfer
+Processor 35: field transfer
+Processor 36: field transfer
+Processor 37: field transfer
+Processor 38: field transfer
+Processor 39: field transfer
+
+End
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2106                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _c15bfde3cb-20210624 OPENFOAM=2106
+Arch   : "LSB;label=32;scalar=64"
+Exec   : interCondensatingEvaporatingFoam -parallel
+Date   : Oct 30 2021
+Time   : 13:33:42
+Host   : node5.iitgn.ac.in
+PID    : 123811
+I/O    : uncollated
+Case   : /home/DilipSS_grp/17210069/OF/ICEF/axissym/0.5ms_1e-8
+nProcs : 40
+Hosts  :
+(
+    (node5.iitgn.ac.in 40)
+)
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+PIMPLE: Operating solver in PISO mode
+
+Reading field p_rgh
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting incompressible transport model Newtonian
+Creating temperaturePhaseChangeTwoPhaseMixture
+
+Selecting phaseChange model interfaceHeatResistance
+DICPCG:  Solving for mDotSmear, Initial residual = 0.999999999976, Final residual = 8.6604084911e-07, No Iterations 49
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+
+Reading g
+
+Reading hRef
+Calculating field g.h
+
+No MRF models present
+
+No finite volume options present
+DICPCG:  Solving for pcorr, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 0, global = 0, cumulative = 0
+Courant Number mean: 0 max: 0
+
+Starting time loop
+
+Courant Number mean: 0 max: 0
+Interface Courant Number mean: 0 max: 0
+Time = 1e-08
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 0.999999999976, Final residual = 8.6604084911e-07, No Iterations 49
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.999000075642  Min(alpha.liquid) = 0  Max(alpha.liquid) = 1
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.999000075605  Min(alpha.liquid) = 0  Max(alpha.liquid) = 1
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 7.14665493929e-09, No Iterations 15
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 2.26289253329e-09, No Iterations 15
+smoothSolver:  Solving for Uz, Initial residual = 1, Final residual = 1.3524920447e-08, No Iterations 15
+smoothSolver:  Solving for T, Initial residual = 4.0737512272e-07, Final residual = 1.26542642278e-13, No Iterations 15
+min/max(T) = 373, 378.027600456
+DICPCG:  Solving for p_rgh, Initial residual = 0.37282467377, Final residual = 0.000363903112494, No Iterations 788
+DICPCG:  Solving for p_rgh, Initial residual = 0.0365518292085, Final residual = 3.56301028013e-05, No Iterations 731
+DICPCG:  Solving for p_rgh, Initial residual = 0.00454983666894, Final residual = 4.51861247781e-06, No Iterations 677
+DICPCG:  Solving for p_rgh, Initial residual = 0.00162938350974, Final residual = 9.90233273525e-10, No Iterations 973
+ExecutionTime = 1.3 s  ClockTime = 1 s
+
+Courant Number mean: 1.39585087325e-06 max: 0.699848355809
+Interface Courant Number mean: 0 max: 0
+Time = 2e-08
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 0.999999999976, Final residual = 8.65895325938e-07, No Iterations 49
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.999000015216  Min(alpha.liquid) = -3.83084797271e-22  Max(alpha.liquid) = 1
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998999954861  Min(alpha.liquid) = -2.36741198132e-21  Max(alpha.liquid) = 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0144115383629, Final residual = 4.03929436948e-08, No Iterations 15
+smoothSolver:  Solving for Uy, Initial residual = 0.0735139612811, Final residual = 9.82432048433e-08, No Iterations 20
+smoothSolver:  Solving for Uz, Initial residual = 0.0334027278475, Final residual = 6.50204397127e-08, No Iterations 15
+smoothSolver:  Solving for T, Initial residual = 7.42134478671e-07, Final residual = 1.2465917188e-13, No Iterations 15
+min/max(T) = 373, 378.027562943
+DICPCG:  Solving for p_rgh, Initial residual = 0.0937993317074, Final residual = 9.12416099818e-05, No Iterations 826
+DICPCG:  Solving for p_rgh, Initial residual = 0.0108802857559, Final residual = 1.07126913686e-05, No Iterations 705
+DICPCG:  Solving for p_rgh, Initial residual = 0.00229068157131, Final residual = 2.21536679896e-06, No Iterations 668
+DICPCG:  Solving for p_rgh, Initial residual = 0.00101691688554, Final residual = 9.91643606591e-10, No Iterations 921
+ExecutionTime = 2.29 s  ClockTime = 2 s
+
+Courant Number mean: 3.18785932919e-06 max: 0.298416840932
+Interface Courant Number mean: 4.40583745248e-09 max: 0.151977812196
+Time = 3e-08
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 0.999999999983, Final residual = 8.41444212548e-07, No Iterations 49
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998999895267  Min(alpha.liquid) = -2.59020669879e-19  Max(alpha.liquid) = 1
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998999835708  Min(alpha.liquid) = -2.10373582124e-19  Max(alpha.liquid) = 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0611082768049, Final residual = 7.99949288581e-08, No Iterations 16
+smoothSolver:  Solving for Uy, Initial residual = 0.278830362149, Final residual = 9.06588402325e-08, No Iterations 25
+smoothSolver:  Solving for Uz, Initial residual = 0.195069953883, Final residual = 8.45896171985e-08, No Iterations 17
+smoothSolver:  Solving for T, Initial residual = 7.43484154792e-07, Final residual = 1.23003149426e-13, No Iterations 15
+min/max(T) = 373, 378.027525339
+DICPCG:  Solving for p_rgh, Initial residual = 0.0418082826735, Final residual = 4.15954468172e-05, No Iterations 831
+DICPCG:  Solving for p_rgh, Initial residual = 0.00893740045294, Final residual = 8.7805942988e-06, No Iterations 743
+DICPCG:  Solving for p_rgh, Initial residual = 0.00238064531691, Final residual = 2.27198781856e-06, No Iterations 698
+DICPCG:  Solving for p_rgh, Initial residual = 0.00124378616273, Final residual = 9.93282380887e-10, No Iterations 929
+ExecutionTime = 3.3 s  ClockTime = 3 s
+
+Courant Number mean: 2.19724158973e-06 max: 0.273510362656
+Interface Courant Number mean: 5.41263551213e-08 max: 0.183346911578
+Time = 4e-08
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 0.999999999983, Final residual = 8.42614258429e-07, No Iterations 49
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998999749793  Min(alpha.liquid) = -1.59348792679e-21  Max(alpha.liquid) = 1
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998999663877  Min(alpha.liquid) = -1.30520174255e-19  Max(alpha.liquid) = 1
+smoothSolver:  Solving for Ux, Initial residual = 0.0410471678655, Final residual = 7.66530683164e-08, No Iterations 15
+smoothSolver:  Solving for Uy, Initial residual = 0.200814364051, Final residual = 8.57211951324e-08, No Iterations 25
+smoothSolver:  Solving for Uz, Initial residual = 0.23216801583, Final residual = 8.92758953302e-08, No Iterations 19
+smoothSolver:  Solving for T, Initial residual = 1.1366805001e-06, Final residual = 1.22124773501e-13, No Iterations 15
+min/max(T) = 373, 378.02748804
+DICPCG:  Solving for p_rgh, Initial residual = 0.0315969644356, Final residual = 3.14988111462e-05, No Iterations 823
+DICPCG:  Solving for p_rgh, Initial residual = 0.00742445828059, Final residual = 7.27403958202e-06, No Iterations 731
+DICPCG:  Solving for p_rgh, Initial residual = 0.00213444816662, Final residual = 2.12041531315e-06, No Iterations 711
+DICPCG:  Solving for p_rgh, Initial residual = 0.0016656516444, Final residual = 9.78688267217e-10, No Iterations 964
+ExecutionTime = 4.31 s  ClockTime = 4 s
+
+Courant Number mean: 5.56693530655e-06 max: 0.197343906388
+Interface Courant Number mean: 1.64893243471e-07 max: 0.137296845509
+Time = 5e-08
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 0.999999999984, Final residual = 8.43174165539e-07, No Iterations 49
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998999578316  Min(alpha.liquid) = -4.13917491966e-19  Max(alpha.liquid) = 1
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998999492756  Min(alpha.liquid) = -2.06428634554e-19  Max(alpha.liquid) = 1
+smoothSolver:  Solving for Ux, Initial residual = 0.105708541246, Final residual = 9.73929819509e-08, No Iterations 19
+smoothSolver:  Solving for Uy, Initial residual = 0.18866174989, Final residual = 9.27109311942e-08, No Iterations 25
+smoothSolver:  Solving for Uz, Initial residual = 0.184810735475, Final residual = 8.45974074198e-08, No Iterations 18
+smoothSolver:  Solving for T, Initial residual = 1.10886334748e-06, Final residual = 1.23706476249e-13, No Iterations 15
+min/max(T) = 373, 378.027450433
+DICPCG:  Solving for p_rgh, Initial residual = 0.0170943951226, Final residual = 1.67165359396e-05, No Iterations 783
+DICPCG:  Solving for p_rgh, Initial residual = 0.012489119728, Final residual = 1.21906256058e-05, No Iterations 700
+DICPCG:  Solving for p_rgh, Initial residual = 0.0101714271421, Final residual = 1.00291883158e-05, No Iterations 722
+DICPCG:  Solving for p_rgh, Initial residual = 0.00951422232626, Final residual = 2.23141024129e-09, No Iterations 1000
+ExecutionTime = 5.33 s  ClockTime = 5 s
+
+Courant Number mean: 6.99282853499e-06 max: 0.438057986274
+Interface Courant Number mean: 1.75095182334e-07 max: 0.0820468964629
+Time = 6e-08
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 0.999999999984, Final residual = 8.43240528612e-07, No Iterations 49
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998999408127  Min(alpha.liquid) = -1.33994213541e-18  Max(alpha.liquid) = 1
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998999323499  Min(alpha.liquid) = -4.82024374893e-19  Max(alpha.liquid) = 1
+smoothSolver:  Solving for Ux, Initial residual = 0.117344785599, Final residual = 9.25819384839e-08, No Iterations 20
+smoothSolver:  Solving for Uy, Initial residual = 0.082565567662, Final residual = 9.92524022603e-08, No Iterations 21
+smoothSolver:  Solving for Uz, Initial residual = 0.0722990178755, Final residual = 8.32826354931e-08, No Iterations 20
+smoothSolver:  Solving for T, Initial residual = 1.07853576533e-06, Final residual = 1.22997874243e-13, No Iterations 15
+min/max(T) = 373, 378.0274126
+DICPCG:  Solving for p_rgh, Initial residual = 0.0441872033042, Final residual = 4.38086115715e-05, No Iterations 825
+DICPCG:  Solving for p_rgh, Initial residual = 0.0210180928763, Final residual = 2.07173796984e-05, No Iterations 709
+DICPCG:  Solving for p_rgh, Initial residual = 0.0114995009916, Final residual = 1.11266742952e-05, No Iterations 651
+DICPCG:  Solving for p_rgh, Initial residual = 0.0137806294652, Final residual = 1.86340685106e-09, No Iterations 1000
+ExecutionTime = 6.34 s  ClockTime = 6 s
+
+Courant Number mean: 3.75260872125e-06 max: 1.63796831784
+Interface Courant Number mean: 1.89393089799e-07 max: 0.244771852282
+Time = 7e-08
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 0.999999999984, Final residual = 8.43346860369e-07, No Iterations 49
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.99899923357  Min(alpha.liquid) = -7.92629149294e-19  Max(alpha.liquid) = 1
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998999143642  Min(alpha.liquid) = -6.67518718896e-19  Max(alpha.liquid) = 1
+smoothSolver:  Solving for Ux, Initial residual = 0.117396442049, Final residual = 9.63818362734e-08, No Iterations 21
+smoothSolver:  Solving for Uy, Initial residual = 0.325847636653, Final residual = 9.88289445178e-08, No Iterations 30
+smoothSolver:  Solving for Uz, Initial residual = 0.507340826556, Final residual = 9.77840910229e-08, No Iterations 35
+smoothSolver:  Solving for T, Initial residual = 1.14673352809e-06, Final residual = 1.23162191266e-13, No Iterations 15
+min/max(T) = 373, 378.027375307
+DICPCG:  Solving for p_rgh, Initial residual = 0.0325770526541, Final residual = 3.17579057571e-05, No Iterations 845
+DICPCG:  Solving for p_rgh, Initial residual = 0.0212965508226, Final residual = 2.0875431306e-05, No Iterations 634
+DICPCG:  Solving for p_rgh, Initial residual = 0.0260135917171, Final residual = 2.53892740477e-05, No Iterations 684
+DICPCG:  Solving for p_rgh, Initial residual = 0.0227010740157, Final residual = 4.40337566668e-09, No Iterations 1000
+ExecutionTime = 7.36 s  ClockTime = 7 s
+
+Courant Number mean: 1.11597238719e-05 max: 7.53100573057
+Interface Courant Number mean: 1.80982613243e-07 max: 0.872029914191
+Time = 8e-08
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 0.999999999984, Final residual = 8.43414321873e-07, No Iterations 49
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998999061163  Min(alpha.liquid) = -3.37880654853e-19  Max(alpha.liquid) = 1
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998998978685  Min(alpha.liquid) = -4.54316367358e-19  Max(alpha.liquid) = 1
+smoothSolver:  Solving for Ux, Initial residual = 0.36204401492, Final residual = 9.03894629883e-08, No Iterations 30
+smoothSolver:  Solving for Uy, Initial residual = 0.353179561437, Final residual = 8.91199099109e-08, No Iterations 28
+smoothSolver:  Solving for Uz, Initial residual = 0.327045245405, Final residual = 9.23393904157e-08, No Iterations 47
+smoothSolver:  Solving for T, Initial residual = 1.03315044132e-06, Final residual = 1.25513915949e-13, No Iterations 15
+min/max(T) = 373, 378.027337284
+DICPCG:  Solving for p_rgh, Initial residual = 0.0653532451525, Final residual = 6.51377437203e-05, No Iterations 815
+DICPCG:  Solving for p_rgh, Initial residual = 0.0338323312468, Final residual = 3.35909526314e-05, No Iterations 690
+DICPCG:  Solving for p_rgh, Initial residual = 0.0535411914881, Final residual = 5.28937285224e-05, No Iterations 705
+DICPCG:  Solving for p_rgh, Initial residual = 0.0544011401717, Final residual = 6.19265256809e-09, No Iterations 1000
+ExecutionTime = 8.4 s  ClockTime = 8 s
+
+Courant Number mean: 3.70284635381e-05 max: 29.880697574
+Interface Courant Number mean: 1.37748597435e-07 max: 3.54472108282
+Time = 9e-08
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 0.999999999984, Final residual = 8.43423952202e-07, No Iterations 49
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.99899892232  Min(alpha.liquid) = -0.000120285032518  Max(alpha.liquid) = 1
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998998865956  Min(alpha.liquid) = -0.000158780277758  Max(alpha.liquid) = 1
+smoothSolver:  Solving for Ux, Initial residual = 0.118092640519, Final residual = 9.5942826595e-08, No Iterations 28
+smoothSolver:  Solving for Uy, Initial residual = 0.258152165154, Final residual = 9.12579675658e-08, No Iterations 26
+smoothSolver:  Solving for Uz, Initial residual = 0.0237983165093, Final residual = 9.57433343216e-08, No Iterations 32
+smoothSolver:  Solving for T, Initial residual = 6.5192812574e-07, Final residual = 1.25634020887e-13, No Iterations 15
+min/max(T) = 372.999989504, 378.027296701
+DICPCG:  Solving for p_rgh, Initial residual = 0.138419242985, Final residual = 0.000138323327181, No Iterations 803
+DICPCG:  Solving for p_rgh, Initial residual = 0.495443763086, Final residual = 0.000490888068334, No Iterations 707
+DICPCG:  Solving for p_rgh, Initial residual = 0.145367520829, Final residual = 0.000142862651812, No Iterations 702
+DICPCG:  Solving for p_rgh, Initial residual = 0.864388765637, Final residual = 1.11623104087e-07, No Iterations 1000
+ExecutionTime = 9.44 s  ClockTime = 9 s
+
+Courant Number mean: 0.000171348311513 max: 240.470204224
+Interface Courant Number mean: 3.06868225625e-07 max: 1.23836047731
+Time = 1e-07
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 0.999999999986, Final residual = 8.24425652954e-07, No Iterations 49
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998998724719  Min(alpha.liquid) = -0.00545510620168  Max(alpha.liquid) = 1
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998998584845  Min(alpha.liquid) = -1.2647202545  Max(alpha.liquid) = 18.8018111736
+smoothSolver:  Solving for Ux, Initial residual = 0.0456234440852, Final residual = 2.40838551009e-06, No Iterations 50
+smoothSolver:  Solving for Uy, Initial residual = 0.0650146919253, Final residual = 5.05795840393e-06, No Iterations 50
+smoothSolver:  Solving for Uz, Initial residual = 0.0153319727353, Final residual = 9.9870945523e-08, No Iterations 44
+smoothSolver:  Solving for T, Initial residual = 1.94651356e-06, Final residual = 1.51711701565e-09, No Iterations 15
+min/max(T) = 372.999939404, 378.027254931
+DICPCG:  Solving for p_rgh, Initial residual = 0.265920898445, Final residual = 0.000249903161685, No Iterations 727
+DICPCG:  Solving for p_rgh, Initial residual = 0.0183061059157, Final residual = 1.80646617126e-05, No Iterations 709
+DICPCG:  Solving for p_rgh, Initial residual = 0.317511380683, Final residual = 0.000313641959425, No Iterations 716
+DICPCG:  Solving for p_rgh, Initial residual = 0.0309470581083, Final residual = 9.56681233711e-09, No Iterations 1000
+ExecutionTime = 10.47 s  ClockTime = 10 s
+
+Courant Number mean: 0.000909096871384 max: 943.14779362
+Interface Courant Number mean: 3.14910277022e-06 max: 223.787180286
+Time = 1.1e-07
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 1, Final residual = 8.75269927689e-07, No Iterations 44
+DICPCG:  Solving for mDotSmear, Initial residual = 1, Final residual = 9.31181285795e-07, No Iterations 44
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998998913316  Min(alpha.liquid) = -21580.0194491  Max(alpha.liquid) = 390.678265164
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 0.998996160611  Min(alpha.liquid) = -3819190.15097  Max(alpha.liquid) = 1348033.74264
+smoothSolver:  Solving for Ux, Initial residual = 0.591334048494, Final residual = 0.0420684451635, No Iterations 50
+smoothSolver:  Solving for Uy, Initial residual = 0.594823163233, Final residual = 0.0404315492751, No Iterations 50
+smoothSolver:  Solving for Uz, Initial residual = 0.653605432799, Final residual = 0.00964853434243, No Iterations 50
+smoothSolver:  Solving for T, Initial residual = 0.00213673277124, Final residual = 2.98021026838e-06, No Iterations 50
+min/max(T) = 372.995847473, 378.027172835
+DICPCG:  Solving for p_rgh, Initial residual = 0.713932188647, Final residual = 0.000695229755994, No Iterations 866
+DICPCG:  Solving for p_rgh, Initial residual = 0.00383047439933, Final residual = 3.82160956919e-06, No Iterations 780
+DICPCG:  Solving for p_rgh, Initial residual = 0.00446952199229, Final residual = 4.27984596366e-06, No Iterations 768
+DICPCG:  Solving for p_rgh, Initial residual = 0.00951305511041, Final residual = 1.19656551977e-09, No Iterations 1000
+ExecutionTime = 11.6 s  ClockTime = 11 s
+
+Courant Number mean: 0.113181769959 max: 73886.1457319
+Interface Courant Number mean: 0.00127890821654 max: 11817.4615795
+Time = 1.2e-07
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 1, Final residual = 8.00955837928e-07, No Iterations 39
+DICPCG:  Solving for mDotSmear, Initial residual = 1, Final residual = 8.00955870559e-07, No Iterations 39
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 1269.95517767  Min(alpha.liquid) = -7.59538539964e+12  Max(alpha.liquid) = 6.28745356569e+13
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 4.67739361041e+20  Min(alpha.liquid) = -9.19168093642e+39  Max(alpha.liquid) = 9.32997157407e+39
+smoothSolver:  Solving for Ux, Initial residual = 0.175913030196, Final residual = 2.05947988644e-07, No Iterations 50
+smoothSolver:  Solving for Uy, Initial residual = 0.230988528921, Final residual = 2.23168020404e-07, No Iterations 50
+smoothSolver:  Solving for Uz, Initial residual = 0.376534121087, Final residual = 2.051845222e-07, No Iterations 50
+smoothSolver:  Solving for T, Initial residual = 0.976372948248, Final residual = 9.35119642529e-08, No Iterations 38
+min/max(T) = 372.862915135, 378.532168622
+DICPCG:  Solving for p_rgh, Initial residual = 0.0798357688474, Final residual = 7.77601187291e-05, No Iterations 842
+DICPCG:  Solving for p_rgh, Initial residual = 8.29091779374e-34, Final residual = 8.29091779374e-34, No Iterations 0
+DICPCG:  Solving for p_rgh, Initial residual = 1.11877890397e-33, Final residual = 1.11877890397e-33, No Iterations 0
+DICPCG:  Solving for p_rgh, Initial residual = 1.2516779537e-33, Final residual = 1.53273206167e-34, No Iterations 10
+ExecutionTime = 12.04 s  ClockTime = 12 s
+
+Courant Number mean: 0.738134759772 max: 920789.260295
+Interface Courant Number mean: 0.000750879933533 max: 9917.54642041
+Time = 1.3e-07
+
+PIMPLE: iteration 1
+DICPCG:  Solving for mDotSmear, Initial residual = 1, Final residual = 9.31307078159e-07, No Iterations 33
+DICPCG:  Solving for mDotSmear, Initial residual = 1, Final residual = 9.31307078159e-07, No Iterations 33
+MULES: Solving for alpha.liquid
+MULES: Solving for alpha.liquid
+Liquid phase volume fraction = 2.80333241768e+115  Min(alpha.liquid) = -3.20826229536e+139  Max(alpha.liquid) = 4.46360990828e+139
+[26] #0  MULES: Solving for alpha.liquid
+Foam::error::printStack(Foam::Ostream&) at ??:?
+[26] #1  Foam::sigFpe::sigHandler(int) at ??:?
+[26] #2  ? in /lib64/libpthread.so.0
+[26] #3  ? at ??:?
+[26] #4  ? at ??:?
+[26] #5  ? at ??:?
+[26] #6  __libc_start_main in /lib64/libc.so.6
+[26] #7  ? at ??:?
+[node5:123837:0:123837] Caught signal 8 (Floating point exception: tkill(2) or tgkill(2))
+==== backtrace ====
+ 0 0x000000000000f59b raise()  ???:0
+ 1 0x000000000000f6d0 _L_unlock_13()  funlockfile.c:0
+ 2 0x00000000004f5817 Foam::MULES::limiter<double, Foam::geometricOneField, Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh>, Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh>, Foam::oneField, Foam::zeroField>()  ???:0
+ 3 0x00000000004f1396 Foam::MULES::explicitSolve<Foam::geometricOneField, Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh>, Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh>, Foam::oneField, Foam::zeroField>()  ???:0
+ 4 0x000000000043435c main()  ???:0
+ 5 0x0000000000022445 __libc_start_main()  ???:0
+ 6 0x000000000042dce9 _start()  ???:0
+===================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 123811 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 123812 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 2 PID 123813 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 3 PID 123814 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 4 PID 123815 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 5 PID 123816 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 6 PID 123817 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 7 PID 123818 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 8 PID 123819 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 9 PID 123820 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 10 PID 123821 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 11 PID 123822 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 12 PID 123823 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 13 PID 123824 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 14 PID 123825 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 15 PID 123826 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 16 PID 123827 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 17 PID 123828 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 18 PID 123829 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 19 PID 123830 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 20 PID 123831 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 21 PID 123832 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 22 PID 123833 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 23 PID 123834 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 24 PID 123835 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 25 PID 123836 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 26 PID 123837 RUNNING AT node5
+=   KILLED BY SIGNAL: 8 (Floating point exception)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 27 PID 123838 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 28 PID 123839 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 29 PID 123840 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 30 PID 123841 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 31 PID 123842 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 32 PID 123843 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 33 PID 123844 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 34 PID 123845 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 35 PID 123846 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 36 PID 123847 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 37 PID 123848 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 38 PID 123849 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 39 PID 123850 RUNNING AT node5
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
