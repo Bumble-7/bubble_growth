@@ -1,0 +1,99 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1812                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      dynamicMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dynamicFvMesh   dynamicMultiDimRefineBalancedFvMesh; //dynamicMultiDimRefineFvMesh
+
+enableBalancing true;
+allowableImbalance 0.10;
+
+adaptCriteria
+{
+    type fieldBounds; // options fieldBounds geometric
+    fieldName alpha.water;
+    lowerBound 0.001;
+    upperBound 0.999;
+    nLayer 2; // extends refinement zone by two layers
+    maxCellLevel 3; // default value very high number limits the maxium refinement level
+    minCellLevel 0; // default value 0 specify minimum refinement level
+    negate false; // default false // negates the selection
+    
+    // type composedAdaptCriteria;
+    // criteria
+    // (
+    //     interface
+    //     {
+    //         type fieldBounds;
+    //         fieldName alpha.water;
+    //         lowerBound 0.001;
+    //         upperBound 0.999;
+    //         nLayer     4;
+    //     }
+    //     // fluid
+    //     // {
+    //     //     type fieldBounds;
+    //     //     fieldName alpha.water;
+    //     //     lowerBound 0.001;
+    //     //     upperBound 2;
+    //     //     maxCellLevel 1;
+    //     // }
+    // );
+}
+// How often to refine
+refineInterval  1;
+
+
+// Have slower than 2:1 refinement
+nBufferLayers   2;
+
+// Refine cells only up to maxRefinement levels
+maxRefinement   3;
+
+// Stop refinement if maxCells reached
+maxCells        5000000;
+
+// Flux field and corresponding velocity field. Fluxes on changed
+// faces get recalculated by interpolating the velocity. Use 'none'
+// on surfaceScalarFields that do not need to be reinterpolated.
+correctFluxes
+(
+    (alphaPhi0.water none)
+    (alphaPhiUn none)
+    (nHatf none)
+    (rhoPhi none)
+    (ghf none)
+    (phi none)
+    (rhoCpLPhi none)
+    (alphaPhi_ none)
+    (Kf_ none)
+    (dVf_ none)
+    (deltaFunction_ none)
+    (alphaPhi10 none)
+    (rhoCpVPhi none)
+    (nHatf_ none)
+    (alphaPhi.air none)
+    (alphaPhi.water none)
+    (alphaPhi.water none)
+);
+
+// Write the refinement level as a volScalarField
+dumpLevel       true;
+
+
+
+
+
+// ************************************************************************* //

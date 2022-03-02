@@ -1,0 +1,95 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      setExprFieldsDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+expressions
+(
+    // T
+    // {
+    //     field       T;
+    //     dimensions  [0 0 0 1 0 0 0];
+
+    //     constants
+    //     {
+    //         centre (0 0 0);
+    //     }
+
+    //     variables
+    //     (
+    //         "a0 = 384.1"
+    //         "a1 =       1.671"
+    //         "b1 =      -12.31"
+    //         "a2 =      -10.12"
+    //         "b2 =       -4.97"
+    //         "a3 =      -6.102"
+    //         "b3 =       4.692"
+    //         "a4 =      0.4748"
+    //         "b4 =       3.636"
+    //         "a5 =       1.012"
+    //         "b5 =      0.4581"
+    //         "a6 =      0.1387"
+    //         "b6 =    -0.09064"
+    //         "w =        1641 "
+    //         "xmin = 0.1e-3"
+    //         "xmax = 0.5e-3"
+    //     );
+
+    //     condition
+    //     #{
+    //         (mag(pos().x() - $[(vector)constants.centre].x()) < xmax)
+    //         && (mag(pos().x() - $[(vector)constants.centre].x()) > xmin)
+    //     #};
+
+    //     expression
+    //     #{
+    //           a0 + a1*cos(mag(pos().x())*w) + b1*sin(mag(pos().x())*w) + a2*cos(2*mag(pos().x())*w) + b2*sin(2*mag(pos().x())*w) + a3*cos(3*mag(pos().x())*w) + b3*sin(3*mag(pos().x())*w) 
+    //           + a4*cos(4*mag(pos().x())*w) + b4*sin(4*mag(pos().x())*w) + a5*cos(5*mag(pos().x())*w) + b5*sin(5*mag(pos().x())*w) + a6*cos(6*mag(pos().x())*w) + b6*sin(6*mag(pos().x())*w)
+    //     #};
+    // }
+
+    U
+    {
+        field       U;
+        dimensions  [0 1 -1 0 0 0 0];
+
+        constants
+        {
+            centre (0 0 0);
+        }
+
+        variables
+        (
+            "xmin = 0.05e-3"
+            "xmax = 10e-3"
+        );
+
+        condition
+        #{
+            (mag(pos() - $[(vector)constants.centre]) < xmax)
+            && (mag(pos() - $[(vector)constants.centre]) > xmin)
+        #};
+
+        expression
+        #{
+              ((1.9462e-10)/(magSqr(pos() - $[(vector)constants.centre])))*(vector(pos().x(),pos().y(),pos().z())/(mag(pos() - $[(vector)constants.centre])))
+              // vector(0.005636731,0,0)
+        #};
+    }
+
+);
+
+
+// ************************************************************************* //
