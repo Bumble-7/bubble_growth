@@ -1,0 +1,12 @@
+
+set title "Pressure"
+set ylabel 'Pressure'
+set xlabel 'Iteration'
+
+plot "< cat output.log | grep 'min(p_rgh)' | cut -d' ' -f13 | tr -d ','" title 'Pavg' with lines,\
+"< cat output.log | grep 'min(p_rgh)' | cut -d' ' -f2 | tr -d ','" title 'Pmin' with lines
+pause 1
+reread
+
+set yrange [99970:100030];
+set logscale y

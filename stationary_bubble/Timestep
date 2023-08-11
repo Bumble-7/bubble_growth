@@ -1,0 +1,11 @@
+
+set title "Time step"
+set ylabel 'Delta t'
+set xlabel 'Iteration'
+
+plot "< cat output.log | grep 'deltaT' | cut -d' ' -f3 | tr -d ','" title 'Pavg' with lines
+pause 1
+reread
+
+set yrange [99970:100030];
+set logscale y

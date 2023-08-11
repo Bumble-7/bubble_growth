@@ -1,0 +1,114 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  plus                                  |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 0.0001;
+
+han 2.5*degToRad();
+lx1 3;  // lx of first block
+// lx2 20; // lx of second block
+// lx3 20;
+lz 6;
+
+x1 #calc "$lx1*cos($han)";
+y1p #calc "$lx1*sin($han)";
+y1n #calc "-$lx1*sin($han)";
+
+// x2 #calc "$lx2*cos($han)";
+// y2p #calc "$lx2*sin($han)";
+// y2n #calc "-$lx2*sin($han)";
+
+// x3 #calc "$lx3*cos($han)";
+// y3p #calc "$lx3*sin($han)";
+// y3n #calc "-$lx3*sin($han)";
+
+vertices
+(
+    (0 0 0)
+    ($x1 $y1p 0)
+    ($x1 $y1p $lz)
+    (0 0 $lz)
+    ($x1 $y1n 0)
+    ($x1 $y1n $lz) //5
+
+    // ($x2 $y2p 0)
+    // ($x2 $y2p $lz)
+    // ($x2 $y2n 0)
+    // ($x2 $y2n $lz) //9
+
+    // ($x3 $y3p 0)
+    // ($x3 $y3p $lz)
+    // ($x3 $y3n 0)
+    // ($x3 $y3n $lz) //13
+    
+);
+
+blocks
+(
+    hex (0 4 1 0 3 5 2 3) (80 1 160) simpleGrading (1 1 1)  // for block 1
+    // hex (4 8 6 1 5 9 7 2) (333 1 333) simpleGrading (1 1 1)   
+    // hex (8 12 10 6 9 13 11 7) (60 1 333) simpleGrading (3 1 1)  
+);
+
+patches
+(
+    wall bottom
+    (
+      // (8 12 10 6)
+      (0 1 4 0)
+    )
+
+    wedge front
+     (
+      (3 0 4 5)
+    )
+
+    wedge back
+    (
+      (2 1 0 3)
+    )
+
+    patch right
+    (
+      // (13 11 10 12)
+      (2 5 4 1)
+    )
+    patch top
+    (
+      (3 5 2 3)
+    )
+
+    empty axis
+    (
+      (0 3 3 0)
+    )
+);
+
+boundary               // keyword
+    (
+
+        
+        
+
+
+
+    );
+mergePatchPairs
+(
+
+
+);
+
+// ************************************************************************* //

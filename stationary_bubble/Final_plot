@@ -1,0 +1,39 @@
+set term x11 0
+set title "Pressure"
+set ylabel 'Pressure'
+set xlabel 'Iteration'
+plot "< cat output.log | grep 'min(p_rgh)' | cut -d' ' -f13 | tr -d ','" title 'Pavg' with lines,\
+"< cat output.log | grep 'min(p_rgh)' | cut -d' ' -f2 | tr -d ','" title 'Pmin' with lines
+
+set term x11 1
+set title "Temperature limits"
+set ylabel 'Temperature'
+set xlabel 'Iteration'
+set yrange [350:400]
+plot "< cat output.log | grep 'min(TL)' | cut -d' ' -f2 | tr -d ','" title 'Min_TL' with lines,\
+"< cat output.log | grep 'min(TL)' | cut -d' ' -f5 | tr -d ','" title 'Max_TL' with lines,\
+"< cat output.log | grep 'min(TV)' | cut -d' ' -f2 | tr -d ','" title 'Min_TV' with lines,\
+"< cat output.log | grep 'min(TV)' | cut -d' ' -f5 | tr -d ','" title 'Max_TV' with lines
+unset yrange
+
+set term x11 2
+set title "Alpha limits"
+set ylabel 'Alpha'
+set xlabel 'Iteration'
+plot "< cat output.log | grep 'min(alpha)' | cut -d' ' -f7 | tr -d ','" title 'Min_alpha' with lines,\
+"< cat output.log | grep 'min(alpha)' | cut -d' ' -f12 | tr -d ','" title 'Max_alpha+1' with lines
+
+set term x11 3
+set logscale y
+set title "Residuals"
+set ylabel 'Residual'
+set xlabel 'Iteration'
+plot "< cat output.log | grep 'Solving for Ux' | cut -d' ' -f9 | tr -d ','" title 'Ux' with lines,\
+"< cat output.log | grep 'Solving for Uy' | cut -d' ' -f9 | tr -d ','" title 'Uy' with lines,\
+"< cat output.log | grep 'Solving for Uz' | cut -d' ' -f9 | tr -d ','" title 'Uz' with lines,\
+"< cat output.log | grep 'Solving for omega' | cut -d' ' -f9 | tr -d ','" title 'omega' with lines,\
+"< cat output.log | grep 'Solving for k' | cut -d' ' -f9 | tr -d ','" title 'k' with lines
+unset logscale y
+
+pause 1
+reread

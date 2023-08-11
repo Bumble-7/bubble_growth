@@ -1,0 +1,35 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  plus                                  |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system/fluid";
+    object      setFieldTableDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// The velocity data and calculation are shown from scriven_model_muralidharan.m MATLAB file
+
+field T.water;
+file "T01.csv";
+readerType csv;
+hasHeaderLine false;
+timeColumn 0;
+valueColumns (1);
+
+function sphere;
+origin (0 0 0);
+radius 50e-6;
+scale -1;
+
+
+
+
+// ************************************************************************* //

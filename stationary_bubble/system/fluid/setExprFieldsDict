@@ -1,0 +1,54 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      setExprFieldsDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+expressions
+(
+
+    // The velocity data and calculation are shown from scriven_model_muralidharan.m MATLAB file
+    U
+    {
+        field       U;
+        dimensions  [0 1 -1 0 0 0 0];
+
+        constants
+        {
+            centre (0 0 0);
+        }
+
+        variables
+        (
+            "xmin = 0.05e-3"
+            "xmax = 10e-3"
+        );
+
+        condition
+        #{
+            (mag(pos() - $[(vector)constants.centre]) < xmax)
+            && (mag(pos() - $[(vector)constants.centre]) > xmin)
+        #};
+
+        expression
+        #{
+              ((1.9462e-10)/(magSqr(pos() - $[(vector)constants.centre])))*(vector(pos().x(),pos().y(),pos().z())/(mag(pos() - $[(vector)constants.centre])))
+              // vector(0.005636731,0,0)
+        #};
+    }
+
+);
+
+
+// ************************************************************************* //
