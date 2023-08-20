@@ -1,0 +1,35 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      nucleateDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+//nucleateTime nonuniform List<scalar>2(2e-7 4e-7);
+
+waitTime 0.008;
+
+bub_reg_size 6;
+
+nucleation 0; //1 for yes, 0 for no nucleation
+
+// Ignition_Flag 1;
+// Ignition_Time 2e-3;
+// Ignition_Temperature 710;
+// Reaction_Source 4.39e12;
+// Burning_Time 2.212e-3;
+
+
+// not required if multiple cycles are not used
+surf_temp_region_size 30;
+Nucleating_temperature 379;
+// ************************************************************************* //
